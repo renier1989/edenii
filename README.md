@@ -9,7 +9,7 @@
 - Renier Vargas  
 - Ursula Millan  
 - Ricardo Zevallos  
-- Juan Castillon  
+- Juan Castillejo 
 
 ---
 
