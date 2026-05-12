@@ -7,7 +7,7 @@
 ## 👨‍🚀 Participantes del Proyecto
 
 - Renier Vargas  
-- Ursula Milla  
+- Ursula Millan  
 - Ricardo Zevallos  
 - Juan Castillon  
 
