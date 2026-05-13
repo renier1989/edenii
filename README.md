@@ -65,3 +65,19 @@ Diseñar una experiencia inmersiva en terminal que combine programación, narrat
 Eden II busca demostrar que con herramientas simples se pueden crear experiencias memorables, combinando lógica, diseño y creatividad.
 
 ---
+
+## 📡 Clonar el proyecto
+
+Primero ejecutar el comando :
+
+````
+git clone https://github.com/renier1989/edenii.git
+````
+
+luego ejecutamos el siguiente comando (esto es para cambiar de rama) 
+````
+git checkout dev-edenii
+````
+
+---
+
