@@ -110,39 +110,5 @@ fi
 
 echo ""
 ```
-```mermaid
-graph TD
-    A([Inicio]) --> B[Definir lista de 15 comandos y descripciones]
-    B --> C[Seleccionar aleatoriamente 10 índices únicos]
-    C --> D[Inicializar puntaje = 0 y num_pregunta = 1]
-    D --> E[Limpiar pantalla y mostrar encabezado]
-    
-    %% Inicio del Bucle
-    E --> F{¿num_pregunta <= 10?}
-    
-    F -- Sí --> G[Extraer comando y respuesta correcta del índice actual]
-    G --> H[Generar 2 distractores aleatorios diferentes a la correcta]
-    H --> I[Mezclar las 3 opciones y asignar letras a, b, c]
-    I --> J[Mostrar pregunta y opciones en pantalla]
-    J --> K[/Usuario ingresa respuesta/]
-    
-    K --> L{¿Respuesta correcta?}
-    L -- Sí --> M[Mostrar 'Correcto' e incrementar puntaje]
-    L -- No --> N[Mostrar 'Incorrecto' y la respuesta correcta]
-    
-    M --> O[Incrementar num_pregunta]
-    N --> O
-    O --> F
-    
-    %% Fin del Bucle y Resultados
-    F -- No --> P[Mostrar Puntaje Total de 10]
-    P --> Q{Evaluar Puntaje}
-    
-    Q -- Puntaje >= 8 --> R[Mensaje: ¡MAESTRO!]
-    Q -- Puntaje >= 5 --> S[Mensaje: ¡JEDI!]
-    Q -- Puntaje < 5 --> T[Mensaje: ¡PADAWAN!]
-    
-    R --> U([Fin])
-    S --> U
-    T --> U
-```
+
+![alt text](img/diagrama-ricardo.png)
