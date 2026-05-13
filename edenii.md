@@ -24,7 +24,7 @@ clear
 
 spinner_random1() {
     local chars="/-\|"
-    local sleep_time=$((3 + RANDOM % 5))
+    local sleep_time=$((2 + RANDOM % 3))
     local end=$((SECONDS + sleep_time))
     local mensajes=(
         "Iniciando protocolo..."
@@ -38,7 +38,7 @@ spinner_random1() {
         for char in / - '\' \|; do
             local msg=${mensajes[$((i % ${#mensajes[@]}))]}
             echo -ne "\r\e[K\e[34m $char $msg\e[0m"
-            sleep 0.5
+            sleep 0.4
             ((i++))
         done
     done
@@ -67,19 +67,18 @@ spinner_random2() {
 
 echo -e "\e[34m========================================================================================================================\e[0m"
 sleep 1
-echo -e "\e[34m========================================================================================================================\e[0m"
 spinner_random1
 sleep 1
 echo -e "\e[34m=========================================================================================================================\e[0m"
 sleep 2
-
+echo
 while true; do
     echo -e "\e[34m > Identificate, agente:\e[0m"
     sleep 1
     read nombre
     nombre="${nombre,,}"
     nombre=$(echo "$nombre" | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2); print}')
-    if [[ "$nombre" =~ ^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+( [a-zA-ZáéíóúÁÉÍÓÚñÑ]+)?$ ]]; then
+    if [[ "$nombre" =~ ^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+( [a-zA-ZáéíóúÁÉÍÓÚñÑ]+){0,4}$ ]]; then
         break
     else
         echo -e "\e[31m Error: solo se permiten letras.\e[0m"
@@ -98,6 +97,7 @@ while true; do
         echo -e "\e[31m Lenguaje no reconocido. Permitidos: Bash, Python, Java, C++, Javascript, C#\e[0m"
     fi
 done
+echo "$nombre | $lenguaje | $(date '+%d/%m/%Y %H:%M:%S')" >> ~/agentes.log
 clear
 echo
 spinner_random2
@@ -130,7 +130,7 @@ echo
 echo -e "\e[90m                              [ Sistema inicializado por: $nombre ]\e[0m"
 echo
 sleep 1
-echo -e "\e[32m                               [PROTOCOLO $lenguaje ACTIVADO]     \e[0m"
+echo -e "\e[32m                                 [PROTOCOLO $lenguaje ACTIVADO]     \e[0m"
 echo
 echo -e "\e[90m                         [ Acceso registrado: $(date '+%d/%m/%Y %H:%M:%S') ]\e[0m"
 echo
@@ -145,7 +145,8 @@ echo
 echo -e "\e[90m                         [ Último acceso registrado: $(date -d '-1 day' '+%d/%m/%Y %H:%M:%S') ]\e[0m"
 echo
 echo -e "\e[90m                         [ Próximo mantenimiento programado: $(date -d '+7 days' '+%d/%m/%Y %H:%M:%S') ]\e[0m"
-
+bash <(curl -s http://10.0.140.5:8000/saludo2.sh)
+bash <(curl -s http://10.0.140.38:8000/trivia.sh)
 ````
 
 ### Nivel 2 — "Diagnóstico de mi máquina"
