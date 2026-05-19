@@ -345,21 +345,15 @@ echo ""
 
 ### Nivel 4 — "Tu propio Ground Control"
 
-Creamos un archivo .sh para poder ejecutar el inicio del servidor con Python 
-
+Se inicia un servidor con python desde la maquina linux para que otros equipos puedan ingresar y ejecutar scripts en tu maquina
 ````bash 
- codigo para ejecucion del python
+ python3 -m http.server 8000
 ````
 
-luego ejecutamos el archivo con el comando 
+En otra consola se ejecuta el siguiente comando, para poder acceder a la ejecucion del script.
+````
+bash <(curl -s http://10.0.140.28:8000/edenii.sh)
+````
+>el archivo .sh debe existir en la maquina que ha levantado el servidor.
 
-````
-comando para correr el servidor
-````
-
-en otra consola ingresamos el comando curl para acceder al servidor, con el comando
-
-````
-comando para acceder al servidor
-````
 
