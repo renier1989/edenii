@@ -32,6 +32,7 @@ spinner_random() {
     tput cnorm
 }
 
+sleep 4
 clear
 echo -e "${GREEN}Iniciando mini-recon para:${NC} $USER"
 spinner_random
