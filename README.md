@@ -34,8 +34,8 @@ La misión se basa en tres pilares fundamentales:
 ## 🛰️ Flujo de la Misión
 
 1. Inicio de conexión con Ground Control  
-2. Autenticación del usuario  
-3. Registro de datos (nombre, rol)  
+2. Autenticación del usuario (Simulada)  
+3. Registro de datos (ultima actividad)  
 4. Ejecución de fases de misión  
 5. Envío de telemetría  
 6. Finalización con cuenta regresiva  

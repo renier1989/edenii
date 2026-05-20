@@ -352,8 +352,9 @@ Se inicia un servidor con python desde la maquina linux para que otros equipos p
 
 En otra consola se ejecuta el siguiente comando, para poder acceder a la ejecucion del script.
 ````
-bash <(curl -s http://10.0.140.28:8000/edenii.sh)
+bash <(curl -s http://10.0.140.5:8000/unificado.sh)
 ````
 >el archivo .sh debe existir en la maquina que ha levantado el servidor.
 
+Se ejecuta el script de la mision.
 
