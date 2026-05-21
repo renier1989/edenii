@@ -354,7 +354,10 @@ En otra consola se ejecuta el siguiente comando, para poder acceder a la ejecuci
 ````
 bash <(curl -s http://10.0.140.5:8000/unificado.sh)
 ````
->el archivo .sh debe existir en la maquina que ha levantado el servidor.
+>NOTA: el archivo .sh debe existir en la maquina que ha levantado el servidor.
 
-Se ejecuta el script de la mision.
+Esto iniciará la ejecucion del script en la maquina que tiene el servidor levantado, en nuestro caso el servidor esta en la IP y puerto [10.0.140.5:8000]
 
+flujo de ejecucion del script.
+
+![img.png](img/img_completo.png)
