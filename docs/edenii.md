@@ -223,7 +223,7 @@ last -n 1 | head -n 1 | awk '{print "Último acceso: " $1 " el " $4 " " $5 " " $
 
 echo -e "\n${GREEN}Reconocimiento finalizado.${NC}"
 ````
-![img.png](img/img.png)
+![img.png](../img/img.png)
 
 
 ### Nivel 3 — "Quiz interactivo"
@@ -341,7 +341,7 @@ fi
 
 echo ""
 ````
-![alt text](img/diagrama-ricardo.png)
+![alt text](../img/diagrama-ricardo.png)
 
 ### Nivel 4 — "Tu propio Ground Control"
 
@@ -360,4 +360,4 @@ Esto iniciará la ejecucion del script en la maquina que tiene el servidor levan
 
 flujo de ejecucion del script.
 
-![img.png](img/img_completo.png)
+![img.png](../img/img_completo.png)

@@ -111,4 +111,4 @@ fi
 echo ""
 ```
 
-![alt text](img/diagrama-ricardo.png)
+![alt text](../img/diagrama-ricardo.png)
